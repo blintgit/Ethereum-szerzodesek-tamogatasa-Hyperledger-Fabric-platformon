@@ -1,0 +1,39 @@
+> vendingMachineChaincode@1.0.0 start /usr/local/src
+> node vendingMachineChaincode.js "--peer.address" "peer0.org1.example.com:7052"
+
+========= VendingMachine Init =========
+{ fcn: 'init', params: [] }
+address deploying contract: ca35b7d915458ef540ade6068dfe2f44e8fa733c
+----Tranzakció futtatása (VendingMachine)-----
+address created: 692a70d2e424a56d2c6c27aa97d1a86395877b3a
+{ fcn: 'changeBalance', params: [ '100' ] }
+----Tranzakció futtatása (changeBalance)-----
+error:0
+false
+returned: 
+{ fcn: 'changeBalance', params: [ '10' ] }
+----Tranzakció futtatása (changeBalance)-----
+error:1
+true
+returned: 
+{ fcn: 'balanceOfAccount',
+  params: [ 'ca35b7d915458ef540ade6068dfe2f44e8fa733c' ] }
+----Tranzakció futtatása (balanceOfAccount)-----
+true
+Query Response(felhasználó token egyenlege):
+returned: 000000000000000000000000000000000000000000000000000000000000000a
+{ fcn: 'transferToken', params: [ '2' ] }
+----Tranzakció futtatása (transferToken)-----
+true
+returned: 0000000000000000000000000000000000000000000000000000000000000001
+{ fcn: 'balanceOfProduct', params: [ '2' ] }
+----Tranzakció futtatása (balanceOfProduct)-----
+true
+Query Response(raktáron lévő termék darabszáma):
+returned: 0000000000000000000000000000000000000000000000000000000000000003
+{ fcn: 'balanceOfAccount',
+  params: [ 'ca35b7d915458ef540ade6068dfe2f44e8fa733c' ] }
+----Tranzakció futtatása (balanceOfAccount)-----
+true
+Query Response(felhasználó token egyenlege):
+returned: 0000000000000000000000000000000000000000000000000000000000000008
