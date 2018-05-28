@@ -1,0 +1,83 @@
+bcsonka@bcsonka-VirtualBox:~/fabric-samples$ sudo docker logs -f  dev-peer0.org1.example.com-VM-1.0
+
+> vendingMachine@1.1.0 start /usr/local/src
+> node vendingMachine.js "--peer.address" "peer0.org1.example.com:7052"
+
+========= VendingMachine Init =========
+{ fcn: 'init', params: [] }
+user_1 address: a8fa5dd30a87bb9e3288d604eb74949c515ab66e
+user_2 address: ca35b7d915458ef540ade6068dfe2f44e8fa733c
+----Tranzakcio futtatasa (VendingMachine)-----
+address created: f1f3df616a1f319226331dee52374c4623fa5e3b
+{ fcn: 'changeBalance', params: [ 'A', '20' ] }
+----Tranzakcio futtatasa (changeBalance)-----
+error:1
+successfull transaction!
+returned: 
+{ fcn: 'changeBalance', params: [ 'B', '40' ] }
+----Tranzakcio futtatasa (changeBalance)-----
+error:1
+successfull transaction!
+returned: 
+{ fcn: 'balanceOfAccount',
+  params: [ 'A', 'a8fa5dd30a87bb9e3288d604eb74949c515ab66e' ] }
+----Tranzakcio futtatasa (balanceOfAccount)-----
+successfull transaction!
+Query Response(felhasznalo token egyenlege):
+returned: 0000000000000000000000000000000000000000000000000000000000000014
+{ fcn: 'balanceOfAccount',
+  params: [ 'B', 'ca35b7d915458ef540ade6068dfe2f44e8fa733c' ] }
+----Tranzakcio futtatasa (balanceOfAccount)-----
+successfull transaction!
+Query Response(felhasznalo token egyenlege):
+returned: 0000000000000000000000000000000000000000000000000000000000000028
+{ fcn: 'transferToken', params: [ 'A', '2' ] }
+----Tranzakcio futtatasa (transferToken)-----
+successfull transaction!
+returned: 0000000000000000000000000000000000000000000000000000000000000001
+{ fcn: 'transferToken', params: [ 'B', '3' ] }
+----Tranzakcio futtatasa (transferToken)-----
+successfull transaction!
+returned: 0000000000000000000000000000000000000000000000000000000000000001
+{ fcn: 'transferToken', params: [ 'A', '1' ] }
+----Tranzakcio futtatasa (transferToken)-----
+successfull transaction!
+returned: 0000000000000000000000000000000000000000000000000000000000000001
+{ fcn: 'transferToken', params: [ 'B', '2' ] }
+----Tranzakcio futtatasa (transferToken)-----
+successfull transaction!
+returned: 0000000000000000000000000000000000000000000000000000000000000001
+{ fcn: 'balanceOfAccount',
+  params: [ 'A', 'a8fa5dd30a87bb9e3288d604eb74949c515ab66e' ] }
+----Tranzakcio futtatasa (balanceOfAccount)-----
+successfull transaction!
+Query Response(felhasznalo token egyenlege):
+returned: 0000000000000000000000000000000000000000000000000000000000000011
+{ fcn: 'balanceOfAccount',
+  params: [ 'B', 'ca35b7d915458ef540ade6068dfe2f44e8fa733c' ] }
+----Tranzakcio futtatasa (balanceOfAccount)-----
+successfull transaction!
+Query Response(felhasznalo token egyenlege):
+returned: 0000000000000000000000000000000000000000000000000000000000000022
+{ fcn: 'balanceOfAccount',
+  params: [ 'A', 'f1f3df616a1f319226331dee52374c4623fa5e3b' ] }
+----Tranzakcio futtatasa (balanceOfAccount)-----
+successfull transaction!
+Query Response(felhasznalo token egyenlege):
+returned: 0000000000000000000000000000000000000000000000000000000000000009
+{ fcn: 'balanceOfProduct', params: [ 'A', '1' ] }
+----Tranzakcio futtatasa (balanceOfProduct)-----
+successfull transaction!
+Query Response(raktaron levo termek darabszama):
+returned: 0000000000000000000000000000000000000000000000000000000000000009
+{ fcn: 'balanceOfProduct', params: [ 'A', '2' ] }
+----Tranzakcio futtatasa (balanceOfProduct)-----
+successfull transaction!
+Query Response(raktaron levo termek darabszama):
+returned: 0000000000000000000000000000000000000000000000000000000000000002
+{ fcn: 'balanceOfProduct', params: [ 'A', '3' ] }
+----Tranzakcio futtatasa (balanceOfProduct)-----
+successfull transaction!
+Query Response(raktaron levo termek darabszama):
+returned: 0000000000000000000000000000000000000000000000000000000000000001
+

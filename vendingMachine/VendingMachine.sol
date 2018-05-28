@@ -6,11 +6,8 @@ contract VendingMachine{
 
     mapping (uint256 => uint256) public product;
 
-    function VendingMachine(
-            uint256 kezdoZseton
-        ) public {
+    function VendingMachine() public {
             zsetonEgyenleg[this] = 0;
-            zsetonEgyenleg[msg.sender] = kezdoZseton;
             product[1] = 10;
             product[2] = 4;
             product[3] = 2;
@@ -22,6 +19,10 @@ contract VendingMachine{
 
     function balanceOf(uint256 _product) public constant returns (uint256 pcs) {
         return product[_product];
+    }
+    
+    function changeBalance(uint256 _newBalance) public {
+        zsetonEgyenleg[msg.sender] = _newBalance;
     }
 
     function transferZseton(uint256 _choice) public returns (bool success) {
@@ -46,13 +47,5 @@ contract VendingMachine{
         else {
           return false;
         }
-
-
     }
-
-
-    function machineStorage() public returns (uint256 W, uint256 C, uint256 S) {
-        return (product[1], product[2], product[3]);
-    }
-
 }
